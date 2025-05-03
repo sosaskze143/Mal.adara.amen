@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>بحث عن العملات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>بحث عن العملات</h1>
+  </header>
+
+  <section id="search-section">
+    <input type="text" id="searchInput" placeholder="أدخل الرقم التسلسلي" />
+    <button onclick="searchCurrency()">بحث</button>
+    <p id="searchResult"></p>
+  </section>
+
+  <script src="data.js"></script>
+  <script>
+    function searchCurrency() {
+      const input = document.getElementById("searchInput").value.trim();
+      const result = currencyData.find(c => c.serial === input);
+      const resEl = document.getElementById("searchResult");
+
+      if (result) {
+        resEl.textContent = `العملة مملوكة لـ ${result.owner} - رقم الهوية: ${result.id}`;
+      } else {
+        resEl.textContent = "العملة غير موجودة.";
+      }
+    }
+  </script>
+</body>
+</html>

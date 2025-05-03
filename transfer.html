@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>نقل ملكية العملات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>نقل ملكية العملات</h1>
+  </header>
+
+  <section id="transfer-form">
+    <form id="transferForm">
+      <label>رقم العملة:</label>
+      <input type="text" id="serialInput" required><br>
+
+      <label>إلى:</label>
+      <select id="newOwner">
+        <option>الحكومة</option>
+        <option>بيان سعد الشهراني</option>
+        <option>وجدان سعد الشهراني</option>
+        <option>محمد سعد الشهراني</option>
+      </select><br>
+
+      <button type="submit">نقل العملة</button>
+    </form>
+
+    <div id="result"></div>
+
+    <h2>تحميل السجلات</h2>
+    <button id="downloadExcel">تحميل ملف Excel</button>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
